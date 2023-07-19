@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Expenses Tracker</h1>
+    </header>
+    <main>
+      <section class="Expenses">
+        <h2>Expenses</h2>
+        <table class="expenses-table" id="expenses">
+          <tr class="table-headers">
+            <th>Expense Category</th>
+            <th>Projected</th>
+            <th>Actual</th>
+            <th>Under/Over</th>
+          </tr>
+          <tr class="row-data" id="data">
+          </tr>
+          <tr class="row-total" id="expenses-totals">
+            <td>Total</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </table>
+        <form id="new-row-form">
+            <label for="Category">Category</label>
+            <input type="text" name="Category" id="category" />
+            <label for="Projected">Projected</label>
+            <input type="text" name="Projected" id="projected" />
+            <label for="Actual">Actual</label>
+            <input type="text" name="Actual" id="actual" />
+            <label for="Under-Over">Under/Over</label>
+            <input type="text" name="Under-Over" id="under-over" />
+
+        </form>
+        <button id="addbutton">Add Row</button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
