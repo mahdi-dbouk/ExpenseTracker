@@ -1,87 +1,156 @@
-*,*::before,*::after{
-    margin:0;
+*,
+*::before,
+*::after {
+    margin: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
     color: var(--primary-text-color);
     padding: 20px;
     background-color: var(--background-color);
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-:root{
+button {
+    border: none;
+    background-color: var(--primary-table-header-color);
+    color: var(--primary-text-color);
+    font-size: var(--table-header-size);
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--primary-active-button-color);
+}
+
+:root {
     --background-color: whitesmoke;
     --secondary-table-color: lightgrey;
-    --primary-text-color: rgb(13,13,13);
+    --primary-text-color: rgb(13, 13, 13);
     --primary-table-header-color: rgba(92, 145, 76, 0.603);
+    --primary-active-button-color: rgba(92, 145, 76, 0.8);
     --secondary-text-color: var(--primary-text-color);
     --cell-text-size: 16px;
     --table-header-size: 20px;
 }
 
-h1, h2{
+h1,
+h2 {
     color: var(--primary-text-color);
     text-align: center;
 }
 
-section{
+form {
+    width: 100% !important;
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+form>div {
+    height: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+form>div>label {
+    font-size: var(--table-header-size);
+    font-weight: 700;
+}
+
+form>div>input {
+    height: 64px;
     width: 100%;
 }
 
-table{
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
     margin-top: 20px;
-    width:100%;
+    margin-bottom: 20px;
+    width: 100%;
     border: 1px solid rgb(45, 45, 45);
     border-collapse: collapse;
 }
-table td{
+
+table td {
+    padding: 20px;
     text-align: center;
     font-size: var(--cell-text-size);
 }
-table th{
+
+table th {
+    padding: 20px;
     font-size: var(--table-header-size);
 }
-.expenses-table .table-headers :nth-of-type(1){
+
+.expenses-table .table-headers :nth-of-type(1) {
     background-color: var(--background-color);
 }
-.expenses-table .table-headers :nth-of-type(even){
+
+.expenses-table .table-headers :nth-of-type(even) {
     background-color: var(--primary-table-header-color);
 }
-.expenses-table .row-data :nth-of-type(even){
+
+.expenses-table .row-data :nth-of-type(even) {
     background-color: var(--primary-table-header-color);
 }
-.expenses-table .table-headers :nth-of-type(3){
-    background-color: var(--secondary-table-color);
-}
-.expenses-table .row-data :nth-of-type(3){
+
+.expenses-table .table-headers :nth-of-type(3) {
     background-color: var(--secondary-table-color);
 }
 
-a{
+.expenses-table .row-data :nth-of-type(3) {
+    background-color: var(--secondary-table-color);
+}
+
+a {
     background-color: var(--background-color) !important;
     text-decoration: none;
     color: var(--primary-text-color);
 }
 
-.actions-cell{
+.new-row-form {
+    width: 100%;
+}
+
+.actions-cell {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-.delete-btn{
-    color:red;
+
+.delete-btn {
+    color: red;
     font-weight: 900;
 }
 
-main{
-    padding:50px;
+
+main {
+    padding: 50px;
     height: inherit;
     width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap:50px;
+    gap: 50px;
 }
