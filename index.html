@@ -16,6 +16,25 @@
       <h1 class="title">Expenses Tracker</h1>
     </header>
     <main>
+      <form id="new-row-form">
+        <div>
+          <label for="Category">Category</label>
+          <input type="text" name="Category" id="category" />
+        </div>
+        <div>
+          <label for="Projected">Projected</label>
+          <input type="text" name="Projected" id="projected" />
+        </div>
+        <div>
+          <label for="Actual">Actual</label>
+          <input type="text" name="Actual" id="actual" />
+        </div>
+        <div>
+          <label for="Under-Over">Under/Over</label>
+          <input type="text" name="Under-Over" id="under-over" />
+        </div>
+      </form>
+      <button id="addbutton">Add Row</button>
       <section class="Expenses">
         <h2>Expenses</h2>
         <table class="expenses-table" id="expenses">
@@ -25,27 +44,13 @@
             <th>Actual</th>
             <th>Under/Over</th>
           </tr>
-          <tr class="row-data" id="data">
-          </tr>
           <tr class="row-total" id="expenses-totals">
             <td>Total</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
+            <td id="total-projected">0</td>
+            <td id="total-actual">0</td>
+            <td id="total-under-over">0</td>
           </tr>
         </table>
-        <form id="new-row-form">
-            <label for="Category">Category</label>
-            <input type="text" name="Category" id="category" />
-            <label for="Projected">Projected</label>
-            <input type="text" name="Projected" id="projected" />
-            <label for="Actual">Actual</label>
-            <input type="text" name="Actual" id="actual" />
-            <label for="Under-Over">Under/Over</label>
-            <input type="text" name="Under-Over" id="under-over" />
-
-        </form>
-        <button id="addbutton">Add Row</button>
       </section>
     </main>
     <script src="./script.js"></script>
